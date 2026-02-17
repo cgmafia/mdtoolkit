@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mdtoolkit"
+version = "1.0.0"
+description = "CLI toolkit to extract code, export tables, generate styled HTML/PDF from Markdown — with GitHub repo support"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Anand Venkataraman", email = "vand3dup@gmail.com" }
+]
+keywords = [
+    "markdown", "cli", "code-extraction", "pdf", "html",
+    "github", "tables", "csv", "xlsx", "developer-tools"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Text Processing :: Markup :: Markdown",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "markdown>=3.4.0",
+    "openpyxl>=3.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.0.0",
+    "twine>=5.0.0",
+    "pytest>=7.0.0",
+]
+
+[project.urls]
+Homepage      = "https://github.com/anandvenkataraman/mdtoolkit"
+Documentation = "https://github.com/anandvenkataraman/mdtoolkit#readme"
+Repository    = "https://github.com/anandvenkataraman/mdtoolkit"
+"Bug Tracker" = "https://github.com/anandvenkataraman/mdtoolkit/issues"
+Changelog     = "https://github.com/anandvenkataraman/mdtoolkit/blob/main/CHANGELOG.md"
+
+[project.scripts]
+mdtoolkit = "mdtoolkit.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mdtoolkit*"]
+
+[tool.setuptools.package-data]
+mdtoolkit = ["py.typed"]

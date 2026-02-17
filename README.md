@@ -27,7 +27,7 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/anandvenkataraman/mdtoolkit.git
+git clone https://github.com/cgmafia/mdtoolkit.git
 cd mdtoolkit
 
 # Install dependencies
@@ -162,7 +162,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 **Anand Venkataraman**
 - 📧 Email: [vand3dup@gmail.com](mailto:vand3dup@gmail.com)
-- 🐙 GitHub: [@anandvenkataraman](https://github.com/anandvenkataraman)
+- 🐙 GitHub: [@cgmafia](https://github.com/cgmafia)
 
 ---
 
