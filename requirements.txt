@@ -1,0 +1,14 @@
+# Markdown Toolkit — Python dependencies
+# Install with: pip install -r requirements.txt
+
+# Core: Markdown → HTML conversion
+# Provides fenced_code, tables, toc extensions
+markdown>=3.4.0
+
+# Table export to styled Excel workbooks
+openpyxl>=3.1.0
+
+# NOTE: PDF export requires wkhtmltopdf (system binary)
+# Ubuntu/Debian:  sudo apt install wkhtmltopdf
+# macOS:          brew install wkhtmltopdf
+# Windows:        https://wkhtmltopdf.org/downloads.html
