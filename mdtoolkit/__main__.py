@@ -25,6 +25,17 @@ def load_md(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def print_usage() -> None:
+    print("Usage: mdtoolkit [file.md] [options]")
+    print()
+    print("  Process a local Markdown file, or launch the interactive")
+    print("  menu when called with no arguments.")
+    print()
+    print("Options:")
+    print("  -h, --help     Show this help message and exit")
+    print("  -v, --version  Show version and exit")
+
+
 def file_summary(md_path: Path, md_text: str) -> None:
     head("📋  Summary of  " + md_path.name)
     lines  = md_text.splitlines()
@@ -159,6 +170,9 @@ def main() -> None:
     if len(sys.argv) >= 2:
         if sys.argv[1] in ("-v", "--version"):
             print("mdtoolkit v" + __version__)
+            sys.exit(0)
+        if sys.argv[1] in ("-h", "--help"):
+            print_usage()
             sys.exit(0)
         md_path = Path(sys.argv[1]).resolve()
         out_dir = md_path.parent / (md_path.stem + "_output")
